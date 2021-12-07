@@ -1,0 +1,60 @@
+include header
+
+    //- p #{foo}
+    //- h3 #{bar}
+div(class="container full-width")
+    div(class="rowfull")
+        div(class="col col-lg-12")
+            div(class="bg-light text-center section-1")
+                img(src="images/forside.png" class="img-fluid" style="margin-left: auto;")
+                div(class="section-subtitle")
+                    p
+                    | Porta nibh venenatis cras sed. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Consectetur libero id faucibus nisl tincidunt. Ullamcorper a lacus vestibulum sed arcu non odio. Non tellus orci ac auctor augue. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas.
+div(class="container")                    
+    div(class='row')
+        each val2, index2 in cat
+            div(class="col col-lg-12")
+                h2
+                    a(
+                        href='/cat?id='+val2['id']
+                    )   
+            
+            each val, index in goods
+                if val2['id'] == val['category']
+                    include card.pug
+    div(class="row tre-image")
+        div(class="column")                
+            img(src='images/pexels-photo-5442594.jpeg' style="width:100%")
+        div(class="column")
+            img(src='images/pexels-photo-5445429.jpeg' style="width:100%")
+        div(class="column")
+            img(src='images/pexels-photo-5438403.jpeg' style="width:100%")
+
+div(class="container sex-columns")         
+    div(class="row")
+        div(class="col-lg-6 bg-color-1")
+                h2 1
+                p.text-1
+                    | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.
+        div(class="col-lg-6 bg-color-2")
+            h2 2
+            p.text-1
+                | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.
+    div(class="row")
+        div(class="col-lg-6 bg-color-2")
+            h2 3
+            p.text-1
+                | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.
+        div(class="col-lg-6 bg-color-2")
+            h2 4
+            p.text-1
+                | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.       
+    div(class="row")
+        div(class="col-lg-6 bg-color-2")
+            h2 5
+            p.text-1
+                | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.
+        div(class="col-lg-6 bg-color-3")
+            h2.cifre 6
+            p.text-3
+                | Recruitment Agency that strives to help businesses put together a staff of highly efficient and skilled professionals, and also serve employees by opening up new vistas of job opportunities for them.

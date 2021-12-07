@@ -1,0 +1,199 @@
+* {
+  font-family: monospace;
+}
+
+.wrap {
+  background: #fff;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.site-header {
+  height: auto;
+  /* padding: 20px 0; */
+}
+
+.site-header h1 {
+  display: inline-block;
+}
+
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav_site{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* ------------card ------------------- */
+
+.card {
+  border: 1px solid #dedede;
+}
+
+.card-images {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  min-height: 150px;
+}
+
+.goods-little-image {
+  max-width: 90%;
+  margin: 5%;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>NAV>>>>>>>>>>>> */
+
+.site-nav {
+  width: 300px;
+  min-height: 100vh;
+  position: fixed;
+  /* left: -300px; */
+  top: 0;
+  z-index: 999999;
+  padding: 10px;
+  transition: all ease 1s;
+  color: #ffffff;
+  background-color: #d99d8f;
+}
+
+.close-button-div {
+  text-align: right;
+}
+
+.show-nav {
+  position: relative;
+}
+
+ul.category-list {
+  list-style-type: none;
+}
+
+ul.category-list a {
+  color: #424242;
+}
+li{
+  padding-top: 15px;
+}
+
+.site-nav a {
+  color: #424242;
+}
+
+/* ************FORSIDE */
+.section-1{
+  background-color: #d9b5ad;
+  margin: auto;
+}
+.rowfull{
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  margin-bottom: 30px;
+  left: 50%;
+ }
+@media only screen and (max-width: 600px) {
+ .img-fluid {
+    width: 100%;
+  };
+  .section-subtitle{
+    /* margin-bottom: 30px; */
+    padding: auto;
+    width: auto;
+  }
+}
+
+.section-subtitle{
+    width: 688px;
+    min-height: 15vh;
+    margin: 60px auto;
+    margin-bottom: 20px;
+}
+/* *************FOOTER */
+footer{
+  background-image:url(../images/pexels-photo-764880.jpeg);
+  padding: 100px;
+  /* width:100vw;
+  background-repeat: no-repeat; */
+  /* text-align: center; */
+  /* max-width:  100%; */
+}
+
+.footer-text{
+  /* margin: 20px auto 0; */
+  padding-bottom: 40px;
+  color:black;
+}
+
+.u-layout-col {
+  flex-direction: column;
+  /* min-height: 100%; */
+  background-color: white;
+  /* padding:100px; */
+}
+.mb-4{
+  font-size: 20px;
+}
+
+/* **********TRE BILLEDER PÅ FORSIDEN */
+.column {
+  float: left;
+  width: 33.33%;
+  /* padding: 5px; */
+}
+.tre-image{
+  /* width: 100vw; */
+  position: relative;
+  margin-bottom: 30px;
+}
+/* ************SEKS KOLONER */
+.u-container-1{
+  display: flex;
+  flex-direction: column;
+}
+
+.sex-columns{
+  min-height: 646px;
+}
+.bg-color-1{
+  background-color: #d9b5ad;
+  padding: 20px;
+  display: flex;
+}
+.text-1{
+  margin:20px;
+}
+.bg-color-2{
+  padding: 20px;
+  display: flex;
+}
+.bg-color-3{
+  background-color: #bf846f;
+  padding: 20px;
+  display: flex;
+}
+.cifre{
+  color:white;
+}
+.text-3{
+  margin:20px;
+}
