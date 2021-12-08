@@ -34,7 +34,7 @@ let con = mysql.createConnection({
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 
-app.listen(5000, function () {
+app.listen((process.env.PORT || 5000), function () {
     console.log('node express work on 5000');
 });
 
