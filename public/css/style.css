@@ -1,6 +1,9 @@
 * {
   font-family: monospace;
 }
+body {
+  font-family: monospace;
+}
 
 .wrap {
   background: #fff;
@@ -67,10 +70,10 @@
   width: 300px;
   min-height: 100vh;
   position: fixed;
-  /* left: -300px; */
+  left: -300px;
   top: 0;
   z-index: 999999;
-  padding: 10px;
+  padding: 20px;
   transition: all ease 1s;
   color: #ffffff;
   background-color: #d99d8f;
@@ -196,4 +199,17 @@ footer{
 }
 .text-3{
   margin:20px;
+}
+
+/* **********GOODS - PRODUKTER */
+
+.panel-title{
+  font-size:20px;
+  font-family: monospace;
+}
+/* **********MENU */
+
+.cart-header, .card-title{
+  font-size:20px;
+  font-family: monospace;
 }

@@ -7,20 +7,22 @@ div(class='wrap')
 
     div(class='container')
       div(class='row')
-        div(class='col col-md-12')
-            h2(class="panel-title") #{goods[0]['name']}
+        
         div(class="col col-md-4")
             img(
-                src="images/"+goods[0]['image']
-                class="goods-big-image"
+                src="/images/"+goods[0]['image']
+                class="goods-little-image"
             )
-        div(class="col col-md-8")
-            p #{goods[0]['description']}
-            span(class="success") Pris: #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} DKK
-            button(
-                class="button-success add-to-cart"
-                data-goods_id=goods[0]['id']
-            ) to cart
+        div(class='col col-md-8')
+          h2(class="panel-title") #{goods[0]['name']}
+          p #{goods[0]['description']}
+          span(class="success") Pris: #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} DKK
+          br
+          br
+          button(
+              class="button-success add-to-cart"
+              data-goods_id=goods[0]['id']
+          ) to cart
     include nav
   include footer
 
