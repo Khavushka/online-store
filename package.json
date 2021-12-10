@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node app.js"
   },
+  "engines":{
+      "node":  "12.11.1"
+  },
   "dependencies": {
     "cookie": "^0.4.1",
     "cookie-parser": "~1.4.4",
