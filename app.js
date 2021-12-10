@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
 let cookieParser = require('cookie-parser');
+const cool = require('cool-ascii-faces');
 let admin = require('./admin');
 
 /**
@@ -11,6 +12,9 @@ app.use(express.static('public'));
  *  opsætning pug
  */
 app.set('view engine', 'pug');
+
+app.get('/cool', (req, res) => res.send(cool()))
+
 /**
 * opsætning mysql
 */
