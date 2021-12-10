@@ -50,16 +50,16 @@ let mysql = require('mysql');
 * modul opsætning
 */
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const nodemailer = require("nodemailer");
 
 let con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database : 'lite_shop'
+  host: 'uzb4o9e2oe257glt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: 'wipcyf8kvskyvqz2',
+  password: 'ncd8u6kkr370uvu0',
+  database : 'el7ykuxfleae4bg8'
 });
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
