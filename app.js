@@ -59,7 +59,7 @@ let con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root',
-  database : 'web_shop'
+  database : 'lite_shop'
 });
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
