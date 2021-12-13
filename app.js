@@ -4,7 +4,6 @@ let cookieParser = require('cookie-parser');
 const cool = require('cool-ascii-faces');
 let admin = require('./admin');
 
-
 /**
  * public - gemmer alle stier
  */
