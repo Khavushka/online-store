@@ -50,25 +50,24 @@ let mysql = require('mysql');
 * modul opsætning
 */
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const nodemailer = require("nodemailer");
 
 let con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database : 'web_shop'
+  host: 'uzb4o9e2oe257glt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: 'wipcyf8kvskyvqz2',
+  password: 'ncd8u6kkr370uvu0',
+  database : 'el7ykuxfleae4bg8'
 });
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 
-let port = process.env.PORT || 3003;
-app.listen(port, function () {
-    console.log('node express work on 3003');
-});
+// app.listen(process.env.PORT || 3000, function(){
+//   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+// });
 
 app.use(function (req, res, next) {
   if (req.originalUrl == '/admin' || req.originalUrl == '/admin-order') {
