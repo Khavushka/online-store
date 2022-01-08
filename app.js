@@ -199,10 +199,19 @@ app.post('/finish-order', function (req, res) {
 });
 
 app.get('/admin', function (req, res) {
+  console.log(req.cookies);
+  console.log(req.cookies.hash);
   con.query(
-    'SELECT *FROM user id=' + req.cookies.id + 'and password=' + req.cookies.hash + '"',
+    'SELECT *FROM user id=' + req.cookies.id + 'and hash=' + req.cookies.hash + '"',
     function(error, result){
       if(error) reject(error);
+      if(result.length == 0){
+        console.log('error user not found');
+        res.redirect('/login');
+      }
+      else {
+        res.render('admin', {});
+      }
     });
   // res.render('admin', {});
 });
