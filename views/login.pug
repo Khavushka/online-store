@@ -1,11 +1,15 @@
-.login
-    h1 Login
-        form(action="/login", method="POST")
-            label login
-            input(name="login", value="admin", id="login")
-            label password
-            input(type="password", name="password", value="123", id="password")
-            input(type="submit", value="login")
+.bold-line
+.container
+    .window
+        .overlay
+        .content
+                h1 Login
+                    form(action="/login", method="POST")
+                        label login
+                        input(name="login", value="admin", id="login")
+                        label password
+                        input(type="password", name="password", value="123", id="password")
+                        input(type="submit", value="login")
 
 
 // script(src="js/login.js")
