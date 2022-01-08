@@ -199,7 +199,12 @@ app.post('/finish-order', function (req, res) {
 });
 
 app.get('/admin', function (req, res) {
-  res.render('admin', {});
+  con.query(
+    'SELECT *FROM user id=' + req.cookies.id + 'and password=' + req.cookies.hash + '"',
+    function(error, result){
+      if(error) reject(error);
+    });
+  // res.render('admin', {});
 });
 
 app.get('/admin-order', function (req, res) {
