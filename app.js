@@ -65,9 +65,8 @@ let con = mysql.createConnection({
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 
-const server = app.listen(process.env.PORT || 5000, () => {
-  const port = server.address().port;
-  console.log(`Express is working on port ${port}`);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 app.use(function (req, res, next) {
