@@ -76,11 +76,6 @@ app.use(function (req, res, next) {
   }
 });
 
-app.use(function (req, res, next) {
-  console.log(req);
-  next();
-});
-
 app.get('/', function (req, res) {
   
   let cat = new Promise(function (resolve, reject) {
@@ -140,7 +135,7 @@ app.get('/cat', function (req, res) {
   })
 });
 
-app.get('/goods', function (req, res) {
+app.get('/goods*', function (req, res) {
   console.log(req.query.id);
   con.query('SELECT * FROM goods WHERE id=' + req.query.id, function (error, result, fields) {
     if (error) throw error;
@@ -200,35 +195,10 @@ app.post('/finish-order', function (req, res) {
 });
 
 app.get('/admin', function (req, res) {
-  admin(req, res, con, 
-    function (){
       res.render('admin', {})
-      }
-    );
-  // console.log(req.cookies);
-  // console.log(req.cookies.hash);
-  // if(req.cookies.hash == undefined || req.cookies.id == undefined){
-  //   res.redirect('/login');
-  //   return false;
-  // }
-  // con.query(
-  //   'SELECT *FROM user id=' + req.cookies.id + 'and hash=' + req.cookies.hash + '"',
-  //   function(error, result){
-  //     if(error) reject(error);
-  //     if(result.length == 0){
-  //       console.log('error user not found');
-  //       res.redirect('/login');
-  //     }
-  //     else {
-  //       res.render('admin', {});
-  //     }
-  //   });
-  // // res.render('admin', {});
-});
+    });
 
 app.get('/admin-order', function (req, res) {
-  admin(req, res, con, 
-      function(){
         con.query(`SELECT 
         shop_order.id as id,
         shop_order.user_id as user_id,
@@ -249,9 +219,7 @@ app.get('/admin-order', function (req, res) {
             console.log(result);
             res.render('admin-order', { order: JSON.parse(JSON.stringify(result)) });
           });
-      }
-    );
-});
+      });
 
 /**
  *  login form ==============================
