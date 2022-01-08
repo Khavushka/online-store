@@ -275,8 +275,8 @@ function saveOrder(data, result) {
     if (error) throw error;
     console.log('1 user info saved');
     console.log(resultQuery);
-    let userId = resultQuery.insertId;
-    date = new Date() / 1000;
+    let userId = resultQuery.insertId;//her gemmer vi alt om user
+    date = new Date() / 1000;//gemmer alt om ordre
     for (let i = 0; i < result.length; i++) {
       sql = "INSERT INTO shop_order(date, user_id, goods_id,goods_cost, goods_amount, total) VALUES (" + date + "," + userId + "," + result[i]['id'] + "," + result[i]['cost'] + "," + data.key[result[i]['id']] + "," + data.key[result[i]['id']] * result[i]['cost'] + ")";
       con.query(sql, function (error, resultQuery) {
