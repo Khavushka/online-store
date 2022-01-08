@@ -337,7 +337,7 @@ button:focus {
   height: 100%;
 }
 
-.content {
+/* .content {
   padding-left: 25px;
   padding-right: 25px;
   display: -webkit-box;
@@ -348,7 +348,7 @@ button:focus {
   -ms-flex-flow: column;
   flex-flow: column;
   z-index: 5;
-}
+} */
 
 .welcome {
   font-weight: 200;
