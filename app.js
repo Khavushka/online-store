@@ -65,7 +65,10 @@ let con = mysql.createConnection({
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 
- app.listen(process.env.PORT || 3000);
+const PORT = process.env.PORT || 80                     
+app.listen(PORT, function () {
+    console.log('node express works')
+})
 
 app.use(function (req, res, next) {
   if (req.originalUrl == '/admin' || req.originalUrl == '/admin-order') {
